@@ -40,7 +40,7 @@ temp = temp->next;
 printf("\n");
 }
 /**
- * rotl - Rotates the first node of the stack to the bottom.
+ * _rotl - Rotates the first node of the stack to the bottom.
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @ln: Interger representing the line number of of the opcode.
  */

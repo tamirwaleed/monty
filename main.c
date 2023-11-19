@@ -1,5 +1,4 @@
 #include "monty.h"
-stack_t *top = NULL;
 /**
  * main - entry point
  * @argc: arguments count
@@ -11,7 +10,7 @@ int main(int argc, char *argv[])
 if (argc != 2)
 {
 fprintf(stderr, "USAGE: monty file\n");
-exit(EXIT_FAILURE);	
+exit(EXIT_FAILURE);
 }
 openf(argv[1]);
 freenodes();
@@ -34,7 +33,7 @@ node->n = n;
 return (node);
 }
 /**
- * free_nodes - Frees nodes in the stack.
+ * freenodes - Frees nodes in the stack.
  */
 void freenodes(void)
 {
