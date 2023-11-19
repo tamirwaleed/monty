@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
  * _printchar - Prints the Ascii value.
  * @stack: Pointer to a pointer pointing to top node of the stack.

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 stack_t *top = NULL;
 /**
  * main - entry point
