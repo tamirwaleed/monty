@@ -17,7 +17,7 @@ fclose(fod);
  * @fod: file pointer
  * Return: Void
  */
-void readf(FILE *fod);
+void readf(FILE *fod)
 {
 int lineno, fmt = 0;
 char *buffer = NULL;
@@ -39,21 +39,21 @@ void findfct(char *opcode, char *val, int fmt, int line)
 int i;
 int flag;
 instruction_t func_list[] = {
-{"push", add_to_stack},
-{"pall", print_stack},
-{"pint", print_top},
-{"pop", pop_top},
+{"push", addtostack},
+{"pall", printstack},
+{"pint", printtop},
+{"pop", poptop},
 {"nop", nop},
-{"swap", swap_nodes},
-{"add", add_nodes},
-{"sub", sub_nodes},
-{"div", div_nodes},
-{"mul", mul_nodes},
-{"mod", mod_nodes},
-{"pchar", print_char},
-{"pstr", print_str},
-{"rotl", rotl},
-{"rotr", rotr},
+{"swap", swapnodes},
+{"add", addnodes},
+{"sub", subnodes},
+{"div", divnodes},
+{"mul", mulnodes},
+{"mod", modnodes},
+{"pchar", _printchar},
+{"pstr", _printstr},
+{"rotl", _rotl},
+{"rotr", _rotr},
 {NULL, NULL}
 };
 if (opcode[0] == '#')
@@ -88,7 +88,7 @@ char *opcode, *value;
 
 	opcode = strtok(buff, delim);
 	if (opcode == NULL)
-		return (format);
+		return (fmt);
 	value = strtok(NULL, delim);
 
 	if (strcmp(opcode, "stack") == 0)
@@ -133,7 +133,7 @@ void call_fun(op_func func, char *op, char *val, int ln, int format)
 		if (format == 0)
 			func(&node, ln);
 		if (format == 1)
-			add_to_queue(&node, ln);
+			addtoqueue(&node, ln);
 	}
 	else
 		func(&top, ln);

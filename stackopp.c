@@ -69,7 +69,7 @@ void divnodes(stack_t **stack, unsigned int linenumber)
 {
 int sum;
 if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-more_err(8, linenumber, "div");
+moreerr(8, linenumber, "div");
 if ((*stack)->n == 0)
 moreerr(9, linenumber);
 (*stack) = (*stack)->next;

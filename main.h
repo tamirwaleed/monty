@@ -1,13 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <string.h>
-#include <ctype.h>
 #define _GNU_SOURCE
-#include <stdlib.h>
+#include <stdio.h>
 #include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <stdarg.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -39,7 +39,7 @@ void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 extern stack_t *top;
-typedef void (*op_fct)(stack_t **, unsigned int);
+typedef void (*op_func)(stack_t **, unsigned int);
 
 void openf(char *file_name);
 void readf(FILE *);

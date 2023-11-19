@@ -11,7 +11,7 @@ if (stack == NULL || *stack == NULL)
 stringerr(11, linenumber);
 ascii = (*stack)->n;
 if (ascii < 0 || ascii > 127)
-string_err(10, linenumber);
+stringerr(10, linenumber);
 printf("%c\n", ascii);
 }
 /**
@@ -68,7 +68,7 @@ void _rotr(stack_t **stack, __attribute__((unused))unsigned int ln)
 stack_t *temp;
 if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 return;
-tmp = *stack;
+temp = *stack;
 while (temp->next != NULL)
 temp = temp->next;
 temp->next = *stack;

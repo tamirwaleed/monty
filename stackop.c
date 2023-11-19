@@ -44,7 +44,7 @@ temp = temp->next;
  */
 void poptop(stack_t **stack, unsigned int linenumber)
 {
-tack_t *temp;
+stack_t *temp;
 if (stack == NULL || *stack == NULL)
 moreerr(7, linenumber);
 temp = *stack;
